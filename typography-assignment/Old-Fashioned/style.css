@@ -1,0 +1,283 @@
+@font-face {
+    font-family: "Chicago";
+    src: url("Fonts/ChicagoKare-Regular.woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 01. General Styling */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    color: #000;
+    background: #fff;
+    font-family: "Chicago", sans-serif;
+}
+
+/* Macintosh Desktop */
+
+.desktop {
+    min-height: 100vh;
+    background-color: #fff;
+    background-image:
+        repeating-conic-gradient(
+            #000 0% 25%,
+            #fff 0% 50%
+        );
+    background-size: 4px 4px;
+}
+
+/* Menu Bar */
+
+.menu-bar {
+    height: 29px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 0 12px;
+    background: #fff;
+    border-bottom: 2px solid #000;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.apple-logo {
+    font-family: Arial, sans-serif;
+    font-size: 23px;
+    line-height: 1;
+}
+
+.menu-bar nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+/* Main Window */
+
+.mac-window {
+    width: min(470px, calc(100vw - 48px));
+    margin: 27px 0 0 35px;
+    background: #fff;
+    border: 2px solid #000;
+    box-shadow: 1px 1px 0 #000;
+}
+
+/* Striped Title Bar */
+
+.window-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    height: 25px;
+    padding: 3px 7px;
+    border-bottom: 2px solid #000;
+    background: #fff;
+}
+
+.close-box {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 0 #000;
+}
+
+.title-stripes {
+    height: 15px;
+    flex: 1;
+    background: repeating-linear-gradient(
+        to bottom,
+        #000 0px,
+        #000 1px,
+        #fff 1px,
+        #fff 3px
+    );
+}
+
+.window-title {
+    padding: 0 3px;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Window Information Bar */
+
+.window-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 3px 7px;
+    border-bottom: 2px solid #000;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Window Content */
+
+.window-body {
+    display: flex;
+    min-height: 190px;
+
+}
+
+.window-content {
+    flex: 1;
+    min-width: 0;
+    padding: 35px 16px;
+    text-align: center;
+}
+
+.window-content h1 {
+    margin: 0 0 22px;
+    font-size: clamp(21px, 4vw, 34px);
+    font-weight: bold;
+    letter-spacing: -0.07em;
+    line-height: 1.1;
+}
+
+.window-content p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Vertical Scrollbar */
+
+.vertical-scroll {
+    display: flex;
+    flex-direction: column;
+    width: 19px;
+    flex-shrink: 0;
+    border-left: 2px solid #000;
+}
+
+.scroll-arrow {
+    position: relative;
+    height: 18px;
+    flex-shrink: 0;
+    background: #fff;
+    border-bottom: 2px solid #000;
+}
+
+.scroll-arrow.down {
+    margin-top: auto;
+    border-top: 2px solid #000;
+    border-bottom: 0;
+}
+
+.scroll-arrow::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    transform: rotate(45deg);
+}
+
+.scroll-arrow.down::after {
+    top: 3px;
+    transform: rotate(225deg);
+}
+
+.scroll-track {
+    flex: 1;
+    background: #fff;
+}
+
+/* Bottom Scrollbar */
+
+.window-bottom {
+    display: flex;
+    height: 19px;
+    border-top: 2px solid #000;
+}
+
+.bottom-arrow,
+.resize-box {
+    position: relative;
+    width: 18px;
+    flex-shrink: 0;
+    background: #fff;
+    border-right: 2px solid #000;
+}
+
+.bottom-track {
+    flex: 1;
+    background: #fff;
+}
+
+.bottom-arrow.right {
+    border-left: 2px solid #000;
+}
+
+.bottom-arrow::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    top: 3px;
+    left: 5px;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+}
+
+.bottom-arrow.right::after {
+    left: 3px;
+    transform: rotate(225deg);
+}
+
+.resize-box {
+    width: 19px;
+    border-left: 2px solid #000;
+    border-right: 0;
+}
+
+.resize-box::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border: 1px solid #000;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 600px) {
+    .mac-window {
+        margin: 25px auto 0;
+    }
+
+    .menu-bar {
+        gap: 15px;
+        padding: 0 8px;
+        font-size: 14px;
+    }
+
+    .menu-bar nav {
+        gap: 14px;
+    }
+
+    .window-info {
+        font-size: 10px;
+    }
+
+    .window-content {
+        padding: 32px 8px;
+    }
+}

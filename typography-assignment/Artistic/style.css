@@ -1,0 +1,192 @@
+/* General Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    background: #F5EEDC;
+    color: #111111;
+    font-family: "Space Mono", monospace;
+}
+
+/* Poster Layout */
+
+.poster {
+    width: min(100%, 1100px);
+    min-height: 100vh;
+    margin: 0;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #111111;
+    border-right: 2px solid #111111;
+}
+
+/* Header and Footer */
+
+.poster-header,
+.poster-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.poster-header {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #111111;
+}
+
+.poster-footer {
+    padding-top: 20px;
+    border-top: 2px solid #111111;
+}
+
+/* Main Composition */
+
+.composition {
+    position: relative;
+    flex: 1;
+    min-height: 680px;
+    overflow: hidden;
+}
+
+/* Geometric Shapes */
+
+.circle {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    top: 12%;
+    right: 7%;
+    border-radius: 50%;
+    background: #FF5DA8;
+}
+
+.rectangle {
+    position: absolute;
+    width: 240px;
+    height: 360px;
+    left: 12%;
+    bottom: 12%;
+    background: #F8D94E;
+    transform: rotate(-12deg);
+}
+
+.small-circle {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    right: 16%;
+    bottom: 18%;
+    border-radius: 50%;
+    background: #315CF5;
+}
+
+/* Artistic Typography */
+
+.perspective {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding-top: 85px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Bodoni Moda", serif;
+    font-size: clamp(100px, 15vw, 190px);
+    font-weight: 900;
+    line-height: 0.85;
+    letter-spacing: -0.08em;
+}
+
+.perspective span {
+    display: block;
+    width: fit-content;
+}
+
+.line-one {
+      color: #111111;
+      transform: rotate(-7deg);
+}
+
+.line-two {
+    color: #111111;
+    margin-left: 28%;
+    transform: rotate(5deg);
+}
+
+.line-three {
+    color: #111111;
+    margin-left: 8%;
+    transform: rotate(-4deg);
+}
+
+/* Supporting Sentence */
+
+.caption {
+    position: relative;
+    z-index: 2;
+    width: fit-content;
+    margin: 35px 8% 80px auto;
+    padding: 15px 20px;
+    background: #F5EEDC;
+    border: 2px solid #111111;
+    font-size: clamp(15px, 1.8vw, 20px);
+    font-weight: 700;
+    line-height: 1.6;
+    transform: rotate(3deg);
+}
+
+/* Responsive Layout */
+
+@media (max-width: 600px) {
+    .poster {
+        padding: 20px;
+    }
+
+    .poster-header,
+    .poster-footer {
+        font-size: 9px;
+        letter-spacing: 0.04em;
+    }
+
+    .composition {
+        min-height: 550px;
+    }
+
+    .perspective {
+        padding-top: 100px;
+        font-size: clamp(65px, 17vw, 100px);
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+        right: -20px;
+    }
+
+    .rectangle {
+        width: 130px;
+        height: 240px;
+    }
+
+    .small-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .caption {
+        margin: 65px 0 50px auto;
+        padding: 12px;
+        font-size: 12px;
+    }
+}
