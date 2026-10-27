@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Little Cat Club - a cheerful little corner of the internet celebrating kittens.">
+    <title>Little Cat Club</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400;1,9..144,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <a href="#" class="logo">LITTLE CAT CLUB &#10035;</a>
+        <span class="header-note">A VERY GOOD PLACE FOR CATS</span>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+
+        <section class="intro">
+            <p class="eyebrow">ISSUE NO. 001 | ALL THINGS FELINE</p>
+
+            <h1>
+                A little<br>
+                more <em>meow.</em>
+            </h1>
+
+            <div class="content-grid">
+
+                <div class="photo-frame">
+                    <img src="images/kitten.jpg" alt="An adorable kitten looking toward the camera">
+                    <span class="photo-label">01 | THE STAR OF THE SHOW</span>
+                </div>
+
+                <div class="intro-copy">
+                    <span class="decorative-star">&#10035;</span>
+
+                    <h2>Small paws.<br>Big personality.</h2>
+
+                    <p>
+                        Life is better with a little curiousity,
+                        a little mischief, and a whole lot of kitten energy.
+                        Welcome to our happy little corner of the internet!
+                    </p>
+
+                    <button id="hello-button" type="button">
+                        SAY HELLO &#8599;
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <span>MADE WITH LOVE & A LITTLE CAT HAIR</span>
+        <span>&copy; 2026 LITTLE CAT CLUB</span>
+    </footer>
+
+    <script>
+        document.getElementById("hello-button").addEventListener("click", function () { alert("Hello, human! Meow! \u{1F431}"); });
+    </script>
+
+</body>
+
+</html>
