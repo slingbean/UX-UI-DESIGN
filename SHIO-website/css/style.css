@@ -1,0 +1,618 @@
+/* SHIO. INDEPENDENT SURF JOURNAL */
+
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Libre+Caslon+Text:ital,wght@0,400;1,400;1,700&family=Noto+Serif+JP:wght@400;500;600&display=swap');
+
+/* Colour System */
+
+:root {
+    --paper-sand: #E8DFD0;
+    --deep-charcoal: #292D30;
+    --sea-glass: #A8C7CC;
+    --midnight-indigo: #182C46;
+    --soft-ivory: #F3EEE4;
+    --vermillion: #D75C43;
+}
+
+/* General Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--paper-sand);
+    color: var(--deep-charcoal);
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--vermillion);
+}
+
+/* Typography */
+
+h1,
+.display-heading {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h2,
+.editorial-heading {
+    font-family: 'Libre Caslon Text', serif;
+    font-style: italic;
+}
+
+.japanese-text {
+    font-family: 'Noto Serif JP', serif;
+}
+
+/* Homepage Foundation */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--sea-glass);
+    overflow: hidden;
+}
+
+.hero-image {
+    position: relative;
+    width: calc(100% - 120px);
+    max-width: 1320px;
+    height: calc(100vh - 128px);
+    min-height: 600px;
+    margin: 98px auto 30px;
+    background-image: url('../images/hero-surf.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 12px;
+    left: 60px;
+    right: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+}
+
+/* Hero - Wordmark & Issue Number */
+
+.hero-brand {
+    position: absolute;
+    top: 35px;
+    left: -40px;
+    z-index: 2;
+}
+
+.hero-brand h1 {
+    margin: 0;
+    color: var(--soft-ivory);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(110px, 15vw, 220px);
+    font-weight: 400;
+    line-height: 0.9;
+}
+
+.hero-brand p {
+    margin: 0;
+    padding-left: 190px;
+    color: var(--deep-charcoal);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+}
+
+/* Japanese Typography */
+
+.hero-japanese {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    z-index: 2;
+    margin: 0;
+    color: var(--soft-ivory);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 30px;
+    font-weight: 400;
+    writing-mode: vertical-rl;
+    letter-spacing: 8px;
+}
+
+/* Hero - Cover Story */
+
+.hero-story {
+    position: absolute;
+    bottom: 55px;
+    left: -10px;
+    z-index: 2;
+    max-width: 65%;
+    color: #000000;
+}
+
+.hero-story span {
+    display: block;
+    margin-bottom: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.hero-story h2 {
+    margin: 0;
+    font-family: 'Libre Caslon Text', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(30px, 3.5vw, 54px);
+    line-height: 1.2;
+}
+
+.hero-story p {
+    margin: 0;
+    font-family: 'Libre Caslon Text', serif;
+    font-style: italic;
+    font-size: clamp(14px, 1.4vw, 20px);
+}
+
+/* Hero - Decorative Kanji */
+
+.hero-kanji {
+    position: absolute;
+    right: -35px;
+    bottom: 0;
+    z-index: 1;
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(130px, 16vw, 230px);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--soft-ivory);
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+/* Main Navigation */
+
+.main-nav {
+    position: absolute;
+    top: 75px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+}
+
+.main-nav a {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--deep-charcoal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+    color: var(--vermillion);
+}
+
+/* The Lineup - Editorial Section */
+
+.lineup {
+    background-color: var(--paper-sand);
+    color: var(--deep-charcoal);
+    padding: 80px 0 100px;
+}
+
+.lineup .container-fluid {
+    max-width: 1440px;
+    padding-left: 8.33%;
+    padding-right: 8.33%;
+}
+
+/* Editorial Index */
+
+.lineup-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+/* Section Heading */
+
+.lineup-heading h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 6vw, 88px);
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+}
+
+/* Featured Stories Count */
+
+.lineup-count {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 6px;
+    text-align: right;
+}
+
+/* Horizontal Divider */
+
+.lineup-divider {
+    border: 0;
+    border-top: 1px solid var(--deep-charcoal);
+    opacity: 1;
+    margin: 4px 0 0;
+}
+
+/* The Lineup - Editorial Story Cards */
+
+.lineup-grid {
+    margin-top: 48px;
+    padding-left: 80px;
+}
+
+/* Story 01 - Culture */
+
+.story-culture {
+    position: relative;
+}
+
+.story-category {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--deep-charcoal);
+    margin-bottom: 4px;
+}
+
+.story-culture .story-image {
+    width: 381px;
+    max-width: 100%;
+    height: 653px;
+    overflow: hidden;
+}
+
+.story-culture .story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-culture .story-content {
+    position: absolute;
+    bottom: 45px;
+    left: -80px;
+    z-index: 2;
+}
+
+.story-culture .story-content h3 {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--deep-charcoal);
+    margin: 0;
+}
+
+.story-culture .story-content p {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--deep-charcoal);
+    margin: 0 0 0 35px;
+}
+
+/* Story 02 - Places */
+
+.story-places {
+    position: relative;
+    width: 100%;
+}
+
+.story-places .story-category {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--deep-charcoal);
+    margin-bottom: 0;
+}
+
+.story-places .story-image {
+    width: 100%;
+    aspect-ratio: 687 / 278;
+    overflow: hidden;
+}
+
+.story-places .story-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 85%;
+}
+
+.story-places .story-content {
+    position: absolute;
+    right: -20px;
+    bottom: -35px;
+    z-index: 2;
+    text-align: left;
+}
+
+.story-places .story-content h3 {
+    font-family: 'Libre Caslon Text', serif;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--deep-charcoal);
+    margin: 0;
+}
+
+.story-places .story-content p {
+    font-family: 'Libre Caslon Text', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--deep-charcoal);
+    margin: 0;
+}
+
+/* Story 3 | The Shape of Things */
+
+.story-objects {
+    position: relative;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.story-objects .story-category {
+    text-align: right;
+    margin: 0 0 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--deep-charcoal);
+}
+
+.story-objects .story-image {
+    position: relative;
+    width: 100%;
+    height: 285px;
+    overflow: hidden;
+}
+
+.story-objects .story-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.story-objects .story-content {
+    position: relative;
+    z-index: 2;
+    margin-top: -65px;
+    margin-left: -45px;
+    width: fit-content;
+    max-width: calc(100% + 45px);
+}
+
+.story-objects .story-content h3 {
+    margin: 0;
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--deep-charcoal);
+}
+
+.story-objects .story-content p {
+    margin: 2px 0 0 18px;
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--deep-charcoal);
+}
+
+/* SHIO. Footer */
+
+.site-footer {
+    position: relative;
+    background-color: var(--midnight-indigo);
+    color: var(--soft-ivory);
+    padding: 75px 0 35px;
+    overflow: hidden;
+}
+
+.footer-inner {
+    position: relative;
+    width: calc(100% - 120px);
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+/* Brand */
+
+.footer-brand {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-wordmark {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(110px, 19vw, 280px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 0.85;
+    letter-spacing: -2px;
+    color: var(--soft-ivory);
+}
+
+.footer-tagline {
+    margin: 20px 0 100px;
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 23px;
+    font-style: italic;
+    color: var(--soft-ivory);
+}
+
+/* Japanese Kanji */
+
+.footer-kanji {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(180px, 25vw, 360px);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--sea-glass);
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+/* Divider */
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--soft-ivory);
+    opacity: 0.45;
+}
+
+/* Navigation and Back to Top */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-top: 25px;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-nav a,
+.back-to-top {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--soft-ivory);
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible,
+.back-to-top:hover,
+.back-to-top:focus-visible {
+    color: var(--vermillion);
+}
+
+/* Responsive Foundation */
+
+@media (max-width: 767px) {
+    .hero-image {
+        width: calc(100% - 32px);
+        height: calc(100svh - 120px);
+        min-height: 500px;
+        margin: 80px auto 40px;
+    }
+
+    .hero-bottom {
+        left: 16px;
+        right: 16px;
+        font-size: 10px;
+    }
+
+    .hero-brand {
+        top: 30px;
+        left: -10px;
+    }
+
+    .hero-brand h1 {
+        font-size: clamp(80px, 18vw, 130px);
+    }
+
+    .hero-brand p {
+        padding-left: 70px;
+        font-size: 12px;
+    }
+
+    .lineup {
+        padding: 60px 0 80px;
+    }
+
+    .lineup .container-fluid {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .lineup-count {
+        font-size: 11px;
+    }
+
+    .site-footer {
+        padding: 60px 0 30px,
+    }
+
+    .footer-inner {
+        width: calc(100% - 40px);
+    }
+
+    .footer-wordmark {
+        font-size: clamp(90px, 27vw, 160px);
+    }
+
+    .footer-tagline {
+        font-size: 17px;
+        margin: 20px 0 85px;
+    }
+
+    .footer-kanji {
+        right: 0;
+        top: 90px;
+        font-size: 160px;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-nav {
+        gap: 18px;
+    }
+}
