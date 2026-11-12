@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --paper: #F1EEE7;
+    --ink: #191919;
+    --lime: #C7FF43;
+    --grey: #DCD8CF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 40px 60px;
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--ink);
+}
+
+.hero {
+    padding: 100px 0 110px;
+    text-align: center;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+h1,
+h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: clamp(60px, 11vw, 160px);
+    line-height: 1;
+    letter-spacing: -0.08em;
+}
+
+.period {
+    color: var(--lime);
+    -webkit-text-stroke: 2px var(--ink);
+}
+
+.subtitle {
+    max-width: 420px;
+    margin: 25px auto 0;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.studies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.study {
+    min-width: 0;
+}
+
+.number {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.animation-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    padding: 20px;
+    overflow: hidden;
+    background: var(--grey);
+}
+
+.study:nth-child(2) .animation-box {
+    background: var(--lime);
+}
+
+.animation-box h2 {
+    font-size: clamp(25px, 3.5vw, 50px);
+    letter-spacing: -0.06em;
+}
+
+.study p {
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+footer {
+    margin-top: 100px;
+    padding-top: 20px;
+    border-top: 1px solid var(--ink);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+
+    .hero {
+        padding: 90px 0;
+    }
+
+    .studies {
+        grid-template-columns: 1fr;
+    }
+
+    .animation-box {
+        min-height: 180px;
+    }
+
+    footer {
+        margin-top: 60px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate__animated {
+        animation: none !important;
+    }
+}
