@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canyon Hikers | Still here. Still waiting.</title>
+  <link rel="icon" href="assets/logos/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Yellowtail&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <a href="#top" class="brand"><img src="assets/logos/primary.png" alt="Canyon Hikers — Grand Canyon, Arizona"></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"
+      aria-controls="navigation">☰</button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="#explore">Explore</a>
+      <a href="#trails">Trails</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="explore" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/photos/Grandcanyon1972.jpg"
+        alt="Panoramic canyon landscape at sunset">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">The Grand Canyon · Arizona</p>
+        <h1 id="hero-title">Still here.<br>Still waiting.</h1>
+        <a class="cta" href="#experiences">Explore the Canyon <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="audio-player">
+        <button id="audio-toggle" type="button" aria-label="Play canyon ambience" aria-pressed="false">
+          <span class="play-symbol" aria-hidden="true"></span>
+          <span class="pause-symbol" aria-hidden="true">Ⅱ</span>
+        </button>
+        <div><span>Sounds of the Canyon</span><small>Natural ambience</small></div>
+        <img class="wave" src="assets/icons/audio-wave.png" alt="">
+        <audio id="ambience" src="assets/audio/desert-wind.wav" loop preload="none"></audio>
+        <span id="audio-status" role="status" class="sr-only"></span>
+      </div>
+      <span class="coordinates">36° N / 112° W</span>
+    </section>
+    <section class="experiences" id="experiences" aria-labelledby="experience-title">
+      <h2 id="experience-title">Find your own adventure.</h2>
+      <p class="subtitle">Three ways to experience something timeless.</p>
+      <div class="cards">
+        <article class="experience" id="trails">
+          <div class="card-image"><img src="assets/photos/illustrative-photo-4.jpg"
+              alt="Illustration of a hiker on a canyon trail"></div>
+          <h3><img src="assets/icons/hiking.png" alt="">The Trails</h3>
+          <p>Find your path through the canyon.</p>
+          <a href="https://www.nps.gov/grca/planyourvisit/day-hiking.htm">Explore trails <span
+              aria-hidden="true">↗</span></a>
+        </article>
+        <article class="experience">
+          <div class="card-image"><img src="assets/photos/Powell-Point.jpg"
+              alt="Canyon formations in golden light"></div>
+          <h3><img src="assets/icons/binoculars.png" alt="">The Views</h3>
+          <p>See the world from a different perspective.</p>
+          <a href="https://www.nps.gov/grca/planyourvisit/index.htm">Discover viewpoints <span
+              aria-hidden="true">↗</span></a>
+        </article>
+        <article class="experience" id="about">
+          <div class="card-image"><img src="assets/photos/illustrative-photo-2.jpg"
+              alt="Vintage-style illustration of two visitors overlooking the canyon"></div>
+          <h3><img src="assets/icons/camera.png" alt="">The History</h3>
+          <p>Discover the stories written in stone.</p>
+          <a href="https://www.nps.gov/grca/learn/historyculture/index.htm">Explore history <span
+              aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <img src="assets/logos/footer.png" alt="Canyon Hikers heritage emblem">
+    <div>
+      <p>© 2026 Canyon Hikers</p>
+    </div>
+    <span class="location">Arizona · USA</span>
+  </footer>
+  
+</body>
+
+</html>
